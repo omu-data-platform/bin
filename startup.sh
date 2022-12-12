@@ -18,9 +18,7 @@ function dc_build_up() {
 
 
 mds_path="masterdatastore"
-mds_startup_file="$mds_path/apiserver/app/startup.sh"
 gt_clone $mds_path
-chmod +x mds_startup_file
 dc_build_up $mds_path
 web_path="web"
 gt_clone $web_path
