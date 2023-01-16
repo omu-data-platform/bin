@@ -1,5 +1,19 @@
 #!/bin/sh
 
+cd $(dirname $0)
+
+function confirm_dir() {
+    echo -n "If the programs does not exist, save in `pwd`. Continue? [y/N]: "
+    read ANS
+    case $ANS in
+        [Yy]* )
+            echo "Startup."
+            ;;
+        * )
+            exit 0
+            ;;
+    esac
+}
 
 # ディレクトリが存在しなければ、git cloneする
 function gt_clone() {
@@ -16,6 +30,7 @@ function dc_build_up() {
     echo ""
 }
 
+confirm_dir
 
 mds="masterdatastore"
 gt_clone $mds
