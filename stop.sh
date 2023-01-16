@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd $(dirname $0)
+
 function dc_down() {
     compose_file="$1/docker-compose.yml"
     docker-compose -f $compose_file down
