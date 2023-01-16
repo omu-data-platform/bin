@@ -17,9 +17,12 @@ function dc_build_up() {
 }
 
 
-mds_path="masterdatastore"
-gt_clone $mds_path
-dc_build_up $mds_path
-web_path="web"
-gt_clone $web_path
-dc_build_up $web_path
+mds="masterdatastore"
+gt_clone $mds
+dc_build_up $mds
+adm="admin"
+gt_clone $adm
+dc_build_up $adm
+web="web"
+gt_clone $web
+dc_build_up $web

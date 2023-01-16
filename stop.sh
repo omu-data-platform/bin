@@ -10,3 +10,5 @@ web_path="./web"
 dc_down $web_path
 mds_path="./masterdatastore"
 dc_down $mds_path
+adm_path="./admin"
+dc_down $adm_path
