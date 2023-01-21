@@ -33,17 +33,37 @@ omu-data-platform
 1. シンボリックリンクでシェルスクリプトをプロジェクトディレクトリ直下におく。
 1. 使用したいスクリプトをプロジェクトディレクトリ直下で実行。
 
-## startup.sh
+## 各コマンド
+### startup.sh
 必要なプログラムをGitHubのリモートリポジトリからクローンし、立ち上げる。
 
 (admin, masterdatastore, web)
 
-## stop.sh
+### stop.sh
 startup.shで立ち上げたプログラムを止める。
 
 (admin, masterdatastore, web)
 
-## update.sh
+### update.sh
 ローカルのプログラムを最新の状態に更新する。
 
 (admin, masterdatastore, web)
+
+## 使用例
+初回。
+```
+$ cd [プロジェクトのディレクトリ]
+$ git clone git@github.com:omu-data-platform/bin.git
+$ ln -s ./bin/startup.sh
+$ ln -s ./bin/stop.sh
+$ ln -s ./update.sh
+$ bash startup.sh
+```
+
+更新。
+```
+$ cd [プロジェクトのディレクトリ]
+$ bash stop.sh
+$ bash update.sh
+$ bash startup.sh
+```
