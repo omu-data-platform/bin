@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 cd $(dirname $0)
 
 function confirm_dir() {
